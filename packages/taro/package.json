@@ -1,0 +1,45 @@
+{
+  "name": "@docker-es/taro",
+  "version": "0.0.1",
+  "description": "Taro Utils 工具库",
+  "homepage": "https://github.com/docker-awesome/docker-es",
+  "bugs": {
+    "url": "https://github.com/docker-awesome/docker-es/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/docker-awesome/docker-es.git"
+  },
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist",
+    "lib"
+  ],
+  "scripts": {
+    "build": "npm run build:rollup && npm run build:ts",
+    "build:rollup": "rollup -c rollup.config.js --bundleConfigAsCjs",
+    "build:ts": "tsc --project tsconfig.json"
+  },
+  "author": "dockerman",
+  "license": "MIT",
+  "dependencies": {
+    "@docker-es/hub": "workspace:^"
+  },
+  "devDependencies": {
+    "@tarojs/helper": "^3.6.32",
+    "@tarojs/runtime": "^3.6.32",
+    "@tarojs/shared": "^3.6.32",
+    "@tarojs/taro": "^3.6.32"
+  },
+  "peerDependencies": {
+    "@tarojs/helper": "^3.6.32",
+    "@tarojs/runtime": "^3.6.32",
+    "@tarojs/shared": "^3.6.32",
+    "@tarojs/taro": "^3.6.32"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org"
+  }
+}

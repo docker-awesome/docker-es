@@ -1,0 +1,42 @@
+{
+  "name": "@docker-es/hub",
+  "version": "0.0.1",
+  "description": "Awesome JavaScript.",
+  "homepage": "https://github.com/docker-awesome/docker-es",
+  "bugs": {
+    "url": "https://github.com/docker-awesome/docker-es/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/docker-awesome/docker-es.git"
+  },
+  "main": "dist/index.js",
+  "module": "dist/index.es.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist",
+    "lib"
+  ],
+  "scripts": {
+    "build": "npm run build:rollup && npm run build:ts",
+    "build:rollup": "rollup -c rollup.config.js --bundleConfigAsCjs",
+    "build:ts": "tsc --project tsconfig.json"
+  },
+  "author": "dockerman",
+  "license": "MIT",
+  "dependencies": {
+    "@docker-es/base64": "workspace:^",
+    "@docker-es/console": "workspace:^",
+    "@docker-es/date-time": "workspace:^",
+    "@docker-es/debounce": "workspace:^",
+    "@docker-es/http-status": "workspace:^",
+    "@docker-es/qs": "workspace:^",
+    "@docker-es/storage": "workspace:^",
+    "@docker-es/throttle": "workspace:^",
+    "@docker-es/validator": "workspace:^"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org"
+  }
+}

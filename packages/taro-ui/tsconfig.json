@@ -1,0 +1,13 @@
+{
+  "extends": "../../tsconfig",
+  "compilerOptions": {
+    "baseUrl": ".",
+    "outDir": "./lib",
+    "target": "ES2017",
+    "module": "ESNext",
+    "jsx": "react",
+    "jsxFactory": "React.createElement"
+  },
+  "include": ["src/**/*"],
+  "exclude": ["node_modules/*", "dist/*"]
+}

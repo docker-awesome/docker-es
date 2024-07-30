@@ -1,0 +1,10 @@
+@import '../variables/default.scss';
+@import '../mixins/index.scss';
+
+.taro-button {
+  color: $color-text-base;
+
+  &.disabled {
+    @include disabled();
+  }
+}
