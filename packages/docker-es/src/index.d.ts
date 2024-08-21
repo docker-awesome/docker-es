@@ -1,4 +1,5 @@
 export { default as Base64 } from '@docker-es/base64';
+export { default as classnames } from '@docker-es/classnames';
 export { default as Logger } from '@docker-es/console';
 export { default as DateTime } from '@docker-es/date-time';
 export { default as debounce } from '@docker-es/debounce';
