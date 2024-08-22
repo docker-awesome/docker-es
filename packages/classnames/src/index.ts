@@ -1,22 +1,18 @@
-import type { Params, Return } from './index.d';
+import type { Params } from './index.d';
 
-function parse(data: Params): Return {
+const separator = String().padEnd(1);
+
+function parse(data: Params) {
   const type = typeof data;
   if (type === 'string') return data;
-  if (type !== 'object') return null;
-  if (Array.isArray(data)) return data.map((item) => parse(item));
-  return Object.keys(data).map((key) => (data[key] ? key : null));
+  if (type !== 'object') return '';
+  if (Array.isArray(data)) return data.map(parse);
+  return Object.keys(data).filter((key) => data[key]);
 }
 
-function classnames(...items: Params[]): string {
-  return [
-    ...new Set(
-      items
-        .map((item) => parse(item))
-        .flat(Infinity)
-        .filter(Boolean)
-    )
-  ].join(' ');
+function classnames(...args: Params[]): string {
+  const set = new Set(args.map(parse).flat(Infinity).filter(Boolean));
+  return [...set].join(separator);
 }
 
 export default classnames;

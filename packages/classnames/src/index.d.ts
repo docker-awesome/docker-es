@@ -1,9 +1,3 @@
-type Item = string | Record<string, boolean>;
-
-export type Params = Item | Item[];
-
-type Output = Params | null;
-
-export type Return = Output[] | (Output[] & { [K in keyof Return]?: Return });
+export type Params = string | Record<string, boolean> | Params[];
 
 export default function classnames(...args: Params[]): string;
