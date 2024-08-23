@@ -30,6 +30,7 @@
     "@docker-es/console": "workspace:^",
     "@docker-es/date-time": "workspace:^",
     "@docker-es/debounce": "workspace:^",
+    "@docker-es/getter": "workspace:^",
     "@docker-es/http-status": "workspace:^",
     "@docker-es/qs": "workspace:^",
     "@docker-es/storage": "workspace:^",

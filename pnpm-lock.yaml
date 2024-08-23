@@ -233,6 +233,9 @@ importers:
       '@docker-es/debounce':
         specifier: workspace:^
         version: link:../debounce
+      '@docker-es/getter':
+        specifier: workspace:^
+        version: link:../getter
       '@docker-es/http-status':
         specifier: workspace:^
         version: link:../http-status
@@ -248,6 +251,8 @@ importers:
       '@docker-es/validator':
         specifier: workspace:^
         version: link:../validator
+
+  packages/getter: {}
 
   packages/http-status: {}
 
