@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.1.3](https://github.com/docker-awesome/docker-es/compare/@docker-es/react@0.1.2...@docker-es/react@0.1.3) (2024-08-23)
+
+**Note:** Version bump only for package @docker-es/react
+
+
+
+
+
 ## [0.1.2](https://github.com/docker-awesome/docker-es/compare/@docker-es/react@0.1.1...@docker-es/react@0.1.2) (2024-08-22)
 
 **Note:** Version bump only for package @docker-es/react

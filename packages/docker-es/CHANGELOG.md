@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.3.0](https://github.com/docker-awesome/docker-es/compare/@docker-es/hub@0.2.1...@docker-es/hub@0.3.0) (2024-08-23)
+
+
+### Features
+
+* **package:** re-export getter ([75ffb1d](https://github.com/docker-awesome/docker-es/commit/75ffb1d96cbc1bc743b9b96c2c8a387b8745ddb9))
+
+
+
+
+
 ## [0.2.1](https://github.com/docker-awesome/docker-es/compare/@docker-es/hub@0.2.0...@docker-es/hub@0.2.1) (2024-08-22)
 
 **Note:** Version bump only for package @docker-es/hub
