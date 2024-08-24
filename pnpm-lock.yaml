@@ -280,9 +280,9 @@ importers:
 
   packages/taro:
     dependencies:
-      '@docker-es/hub':
+      '@docker-es/base64':
         specifier: workspace:^
-        version: link:../docker-es
+        version: link:../base64
     devDependencies:
       '@tarojs/helper':
         specifier: ^3.6.32

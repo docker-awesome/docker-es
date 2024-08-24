@@ -1,4 +1,4 @@
-import { Base64 } from '@docker-es/hub';
+import Base64 from '@docker-es/base64';
 import {
   clearStorageSync,
   getStorageInfoSync,

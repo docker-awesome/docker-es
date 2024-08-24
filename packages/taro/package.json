@@ -24,7 +24,7 @@
   "author": "dockerman",
   "license": "MIT",
   "dependencies": {
-    "@docker-es/hub": "workspace:^"
+    "@docker-es/base64": "workspace:^"
   },
   "devDependencies": {
     "@tarojs/helper": "^3.6.32",

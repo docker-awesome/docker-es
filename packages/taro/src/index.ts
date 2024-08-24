@@ -1,2 +1,1 @@
-export { useStorage } from './hooks/storage';
-export { Storage } from './utils/storage';
+export { Storage } from './storage';
