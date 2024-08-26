@@ -1,5 +1,4 @@
 import Base64 from '@docker-es/base64';
-import type { Session, Storage } from './index.d';
 
 /**
  * Storage：
@@ -8,7 +7,7 @@ import type { Session, Storage } from './index.d';
  * set(key: string, value: any): void; 设置本地存储
  * get(key: string): any; 获取本地存储
  */
-class StorageImpl implements Storage {
+class Storage {
   static clear = () => {
     window.localStorage.clear();
   };
@@ -84,7 +83,7 @@ class StorageImpl implements Storage {
  * set(key: string, value: any): void; 设置本地存储
  * get(key: string): any; 获取本地存储
  */
-class SessionImpl implements Session {
+class Session {
   static clear = () => {
     window.sessionStorage.clear();
   };
@@ -153,4 +152,4 @@ class SessionImpl implements Session {
   };
 }
 
-export { SessionImpl as Session, StorageImpl as Storage };
+export { Session, Storage };

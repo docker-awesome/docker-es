@@ -1,4 +1,4 @@
-export class TaroStorage {
+export default class Storage {
   static clear: () => boolean;
   static remove: (key: string) => boolean;
   static set: (

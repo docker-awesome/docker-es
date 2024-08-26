@@ -1,1 +1,1 @@
-export { TaroStorage as Storage } from './storage/index.d';
+export { default as Storage } from './storage/index.d';

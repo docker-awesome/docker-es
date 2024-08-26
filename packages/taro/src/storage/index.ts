@@ -6,9 +6,8 @@ import {
   removeStorageSync,
   setStorageSync
 } from '@tarojs/taro';
-import type { TaroStorage } from './index.d';
 
-export class Storage implements TaroStorage {
+export default class Storage {
   static clear = () => {
     try {
       clearStorageSync();

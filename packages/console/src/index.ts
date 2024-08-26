@@ -1,6 +1,4 @@
-import type Console from './index.d';
-
-class ConsoleImpl implements Console {
+class Console {
   static print = (...args: any[]) => {
     console.log.apply(null, args);
   };
@@ -46,4 +44,4 @@ class ConsoleImpl implements Console {
   };
 }
 
-export default ConsoleImpl;
+export default Console;
