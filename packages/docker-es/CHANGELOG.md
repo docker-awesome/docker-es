@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.4.0](https://github.com/docker-awesome/docker-es/compare/@docker-es/hub@0.3.0...@docker-es/hub@0.4.0) (2024-08-26)
+
+
+### Features
+
+* **package:** add builder ([f7a07d9](https://github.com/docker-awesome/docker-es/commit/f7a07d924091c499123e637e92ddb195cc20a189))
+
+
+
+
+
 # [0.3.0](https://github.com/docker-awesome/docker-es/compare/@docker-es/hub@0.2.1...@docker-es/hub@0.3.0) (2024-08-23)
 
 

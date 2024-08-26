@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.1.1](https://github.com/docker-awesome/docker-es/compare/@docker-es/throttle@0.1.0...@docker-es/throttle@0.1.1) (2024-08-26)
+
+**Note:** Version bump only for package @docker-es/throttle
+
+
+
+
+
 # [0.1.0](https://github.com/docker-awesome/docker-es/compare/@docker-es/throttle@0.0.2...@docker-es/throttle@0.1.0) (2024-07-31)
 
 
