@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.2.0](https://github.com/docker-awesome/docker-es/compare/@docker-es/taro@0.1.5...@docker-es/taro@0.2.0) (2024-08-27)
+
+
+### Features
+
+* **taro:** add loading ([d1c31d4](https://github.com/docker-awesome/docker-es/commit/d1c31d4d3554f91f86aec9e14d69e3d685061b3b))
+
+
+
+
+
 ## [0.1.5](https://github.com/docker-awesome/docker-es/compare/@docker-es/taro@0.1.4...@docker-es/taro@0.1.5) (2024-08-26)
 
 **Note:** Version bump only for package @docker-es/taro
