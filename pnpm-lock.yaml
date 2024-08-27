@@ -238,6 +238,9 @@ importers:
       '@docker-es/debounce':
         specifier: workspace:^
         version: link:../debounce
+      '@docker-es/formatter':
+        specifier: workspace:^
+        version: link:../formatter
       '@docker-es/getter':
         specifier: workspace:^
         version: link:../getter
@@ -256,6 +259,8 @@ importers:
       '@docker-es/validator':
         specifier: workspace:^
         version: link:../validator
+
+  packages/formatter: {}
 
   packages/getter: {}
 
