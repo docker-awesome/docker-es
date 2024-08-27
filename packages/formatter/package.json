@@ -1,6 +1,6 @@
 {
-  "name": "@docker-es/hub",
-  "version": "0.4.0",
+  "name": "@docker-es/formatter",
+  "version": "0.0.1",
   "description": "Awesome JavaScript.",
   "homepage": "https://github.com/docker-awesome/docker-es",
   "bugs": {
@@ -24,21 +24,6 @@
   },
   "author": "dockerman",
   "license": "MIT",
-  "dependencies": {
-    "@docker-es/base64": "workspace:^",
-    "@docker-es/builder": "workspace:^",
-    "@docker-es/classnames": "workspace:^",
-    "@docker-es/console": "workspace:^",
-    "@docker-es/date-time": "workspace:^",
-    "@docker-es/debounce": "workspace:^",
-    "@docker-es/formatter": "workspace:^",
-    "@docker-es/getter": "workspace:^",
-    "@docker-es/http-status": "workspace:^",
-    "@docker-es/qs": "workspace:^",
-    "@docker-es/storage": "workspace:^",
-    "@docker-es/throttle": "workspace:^",
-    "@docker-es/validator": "workspace:^"
-  },
   "publishConfig": {
     "access": "public",
     "registry": "https://registry.npmjs.org"
