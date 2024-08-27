@@ -1,6 +1,6 @@
 # DateTime 日期格式化
 
-基于 [dayjs](https://day.js.org/en/) 扩展方法挂载到 $ 属性上。
+基于 [dayjs](https://day.js.org/en/) 扩展方法 $fn 和属性 $units, $formats。
 
 ## API 🔊
 
@@ -24,19 +24,29 @@ DateTime.locale(locale_name);
  * @param {Date | Dayjs | string} date 需要格式化的日期
  * @returns {string} 格式化后的日期
  */
-DateTime.$.formatDateTime(date);
+DateTime.$fn.formatDateTime(date);
 
 /** 格式化日期 'YYYY-MM-DD'
  * @param {Date | Dayjs | string} date 需要格式化的日期
  * @returns {string} 格式化后的日期
  */
-DateTime.$.formatDate(date);
+DateTime.$fn.formatDate(date);
 
 /** 格式化时间 'HH:mm:ss'
  * @param {Date | Dayjs | string} date 需要格式化的日期
  * @returns {string} 格式化后的日期
  */
-DateTime.$.formatTime(date);
+DateTime.$fn.formatTime(date);
+
+/** 属性 $units (预定义日期单位)
+ * @prop {Object} $units: { milliseconds, seconds, minutes, hours, days, months, years, dates, weeks, quarters }
+ */
+DateTime.$units;
+
+/** 属性 $formats (预定义日期格式)
+ * @prop {Object} $formats: { hm, hms, ym, ymd, ymdhms }
+ */
+DateTime.$formats;
 ```
 
 ## E.G. 🌰
@@ -51,12 +61,20 @@ DateTime('2024-07-31').format(); // 2024-07-31T00:00:00+08:00
 DateTime.locale('zh-cn');
 
 // 格式化日期时间 'YYYY-MM-DD HH:mm:ss'
-DateTime.$.formatDateTime(new Date());
-DateTime.$.formatDateTime('2024-07-31'); // 2024-07-31 00:00:00
+DateTime.$fn.formatDateTime(new Date());
+DateTime.$fn.formatDateTime('2024-07-31'); // 2024-07-31 00:00:00
 
 // 格式化日期 'YYYY-MM-DD'
-DateTime.$.formatDate('2024-07-31 12:59:59'); // 2024-07-31
+DateTime.$fn.formatDate('2024-07-31 12:59:59'); // 2024-07-31
 
 // 格式化时间 'HH:mm:ss'
-DateTime.$.formatTime('2024-07-31 12:59:59'); // 12:59:59
+DateTime.$fn.formatTime('2024-07-31 12:59:59'); // 12:59:59
+
+// 属性 $units
+DateTime.$units.years; // years
+DateTime.$units.days; // days
+
+// 属性 $formats
+DateTime.$formats.ymdhms; // 'YYYY-MM-DD HH:mm:ss'
+DateTime.$formats.hms; // 'HH:mm:ss'
 ```

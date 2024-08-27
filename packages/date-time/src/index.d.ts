@@ -1,8 +1,20 @@
 import dayjs from 'dayjs';
+import formats from './plugins/formats';
 import type { Formatter } from './plugins/formatter.d';
+import units from './plugins/units';
 
-type DateTime = typeof dayjs & {
-  $: Formatter & { [key: string]: any };
-};
+declare function DateTime(
+  ...args: Parameters<typeof dayjs>
+): DateTime.DateTimejs;
+
+declare namespace DateTime {
+  class DateTimejs extends dayjs.Dayjs {}
+
+  const $fn: Formatter;
+
+  const $units: typeof units;
+
+  const $formats: typeof formats;
+}
 
 export default DateTime;

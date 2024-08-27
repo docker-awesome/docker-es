@@ -1,6 +1,8 @@
 import type { Dayjs } from 'dayjs';
 import dayjs from 'dayjs';
+import formats from './formats';
 import Formatter from './formatter';
+import units from './units';
 
 export default (
   _option: any,
@@ -14,7 +16,9 @@ export default (
   // extend dayjs
   // e.g. add dayjs.utc()
   // dayjsFactory.utc = arguments => {}
-  (dayjsFactory as any).$ = Formatter;
+  (dayjsFactory as any).$fn = Formatter;
+  (dayjsFactory as any).$units = units;
+  (dayjsFactory as any).$formats = formats;
 
   // overriding existing API
   // e.g. extend dayjs().format()

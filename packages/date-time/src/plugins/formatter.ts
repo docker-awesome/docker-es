@@ -1,15 +1,10 @@
 import dayjs from 'dayjs';
+import formats from './formats';
 import type { IOptions } from './formatter.d';
 
 class Formatter {
   // 时间处理
-  static handler = (
-    time: dayjs.ConfigType,
-    options: IOptions = {
-      start: undefined,
-      end: undefined
-    }
-  ) => {
+  static #handler = (time: dayjs.ConfigType, options?: IOptions) => {
     if (!time) {
       return dayjs();
     }
@@ -27,40 +22,36 @@ class Formatter {
   };
 
   // 自定义格式化
-  static format = (
-    time: dayjs.ConfigType,
-    options: IOptions & { format?: string } = {
-      format: 'YYYY-MM-DD HH:mm:ss',
-      start: undefined,
-      end: undefined
-    }
-  ) => {
-    const { format = 'YYYY-MM-DD HH:mm:ss', start, end } = options || {};
-    const d = Formatter.handler(time, { start, end });
+  static format = (time: dayjs.ConfigType, options?: IOptions) => {
+    const { format = formats.ymdhms, start, end } = options || {};
+    const d = Formatter.#handler(
+      time,
+      JSON.parse(JSON.stringify({ start, end }))
+    );
     return d.format(format);
   };
 
-  // 格式化日期时间 'YYYY-MM-DD HH:mm:ss' | undefined
-  static formatDateTime = (time?: dayjs.ConfigType, options: IOptions = {}) => {
-    return Formatter.format(time, {
-      ...options,
-      format: 'YYYY-MM-DD HH:mm:ss'
-    });
-  };
-
   // 格式化日期 'YYYY-MM-DD' | undefined
-  static formatDate = (time?: dayjs.ConfigType, options: IOptions = {}) => {
+  static formatDate = (time: dayjs.ConfigType, options: IOptions) => {
     return Formatter.format(time, {
-      ...options,
-      format: 'YYYY-MM-DD'
+      ...(options || {}),
+      format: formats.ymd
     });
   };
 
   // 格式化时间 'HH:mm:ss' | undefined
-  static formatTime = (time?: dayjs.ConfigType, options: IOptions = {}) => {
+  static formatTime = (time: dayjs.ConfigType, options?: IOptions) => {
     return Formatter.format(time, {
-      ...options,
-      format: 'HH:mm:ss'
+      ...(options || {}),
+      format: formats.hms
+    });
+  };
+
+  // 格式化日期时间 'YYYY-MM-DD HH:mm:ss' | undefined
+  static formatDateTime = (time: dayjs.ConfigType, options: IOptions) => {
+    return Formatter.format(time, {
+      ...(options || {}),
+      format: formats.ymdhms
     });
   };
 }
