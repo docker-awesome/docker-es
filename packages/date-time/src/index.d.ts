@@ -1,7 +1,7 @@
 import dayjs from 'dayjs';
-import formats from './plugins/formats';
+import type { Formats } from './plugins/formats';
 import type { Formatter } from './plugins/formatter.d';
-import units from './plugins/units';
+import type { Units } from './plugins/units';
 
 declare function DateTime(
   ...args: Parameters<typeof dayjs>
@@ -12,9 +12,9 @@ declare namespace DateTime {
 
   const $fn: Formatter;
 
-  const $units: typeof units;
+  const $units: Units;
 
-  const $formats: typeof formats;
+  const $formats: Formats;
 }
 
 export default DateTime;

@@ -11,7 +11,7 @@ export type IOptions = Exclusive<
   { format?: string }
 >;
 
-export class Formatter {
+export declare class Formatter {
   static format: (time: dayjs.ConfigType, options?: IOptions) => string;
   static formatDate: (time: dayjs.ConfigType, options?: IOptions) => string;
   static formatTime: (time: dayjs.ConfigType, options?: IOptions) => string;

@@ -1,4 +1,4 @@
-const unit = {
+const units = {
   milliseconds: 'milliseconds',
   seconds: 'seconds',
   minutes: 'minutes',
@@ -11,4 +11,6 @@ const unit = {
   quarters: 'quarters'
 } as const;
 
-export default unit;
+export type Units = typeof units;
+
+export default units;
