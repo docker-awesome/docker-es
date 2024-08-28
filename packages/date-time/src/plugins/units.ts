@@ -11,6 +11,4 @@ const units = {
   quarters: 'quarters'
 } as const;
 
-export type Units = typeof units;
-
 export default units;

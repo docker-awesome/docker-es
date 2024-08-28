@@ -6,6 +6,4 @@ const formats = {
   ymdhms: 'YYYY-MM-DD HH:mm:ss'
 } as const;
 
-export type Formats = typeof formats;
-
 export default formats;
