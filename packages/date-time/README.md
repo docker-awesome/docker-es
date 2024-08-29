@@ -1,6 +1,6 @@
 # DateTime 日期格式化
 
-基于 [dayjs](https://day.js.org/en/) 扩展方法 $fn 和属性 $units, $formats。
+基于 [dayjs](https://day.js.org/en/) 扩展属性 $fn, $units, $formats。
 
 ## API 🔊
 
@@ -20,6 +20,21 @@ DateTime(date).format();
  */
 DateTime.locale(locale_name);
 
+/** 属性 $fn (预定义日期格式方法)
+ * @prop {Object} $fn: { formatDateTime, formatDate, formatTime }
+ */
+DateTime.$fn;
+
+/** 属性 $units (预定义日期单位)
+ * @prop {Object} $units: { milliseconds, seconds, minutes, hours, days, months, years, dates, weeks, quarters }
+ */
+DateTime.$units;
+
+/** 属性 $formats (预定义日期格式)
+ * @prop {Object} $formats: { hm, hms, ym, ymd, ymdhms }
+ */
+DateTime.$formats;
+
 /** 格式化日期时间 'YYYY-MM-DD HH:mm:ss'
  * @param {Date | Dayjs | string} date 需要格式化的日期
  * @returns {string} 格式化后的日期
@@ -37,16 +52,6 @@ DateTime.$fn.formatDate(date);
  * @returns {string} 格式化后的日期
  */
 DateTime.$fn.formatTime(date);
-
-/** 属性 $units (预定义日期单位)
- * @prop {Object} $units: { milliseconds, seconds, minutes, hours, days, months, years, dates, weeks, quarters }
- */
-DateTime.$units;
-
-/** 属性 $formats (预定义日期格式)
- * @prop {Object} $formats: { hm, hms, ym, ymd, ymdhms }
- */
-DateTime.$formats;
 ```
 
 ## E.G. 🌰

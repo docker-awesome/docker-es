@@ -10,7 +10,7 @@ declare function DateTime(
 declare namespace DateTime {
   class DateTimejs extends dayjs.Dayjs {}
 
-  const $fn: Formatter;
+  const $fn: typeof Formatter;
 
   const $units: typeof units;
 
