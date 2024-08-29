@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.5.3](https://github.com/docker-awesome/docker-es/compare/@docker-es/hub@0.5.0...@docker-es/hub@0.5.3) (2024-08-29)
+
+
+### Bug Fixes
+
+* **package:** date-time interface ([6b0bbd2](https://github.com/docker-awesome/docker-es/commit/6b0bbd25ab53ac1a21e3702919af6482ae1fadbe))
+
+
+
+
+
 ## [0.5.2](https://github.com/docker-awesome/docker-es/compare/@docker-es/hub@0.5.1...@docker-es/hub@0.5.2) (2024-08-28)
 
 **Note:** Version bump only for package @docker-es/hub
