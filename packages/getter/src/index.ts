@@ -1,28 +1,70 @@
 import type { ArrayFromParameter, DataType } from './index.d';
 
 class Getter {
-  static count = (data: ArrayFromParameter) => Array.from(data).length;
+  static count(data: ArrayFromParameter): number {
+    return Array.from(data).length;
+  }
 
-  static uuid = (): string => Math.random().toString(36).slice(2);
+  static uuid(): string {
+    return Math.random().toString(36).slice(2);
+  }
 
-  static type = (data: any): DataType =>
-    Object.prototype.toString.call(data).slice(8, -1).toLowerCase() as DataType;
+  static type(data: any): DataType {
+    return Object.prototype.toString
+      .call(data)
+      .slice(8, -1)
+      .toLowerCase() as DataType;
+  }
 
-  static round = (number: number, precision: number = 2): number =>
-    Math.round((number + Number.EPSILON) * 10 ** precision) / 10 ** precision;
+  static round(number: number, precision: number = 2): number {
+    return (
+      Math.round((number + Number.EPSILON) * 10 ** precision) / 10 ** precision
+    );
+  }
 
-  static random = (
-    from: number,
-    to: number,
-    isInteger: boolean = true
-  ): number => {
+  static random(from: number, to: number, isInteger: boolean = true): number {
     const [max, min] = [Math.max(from, to), Math.min(from, to)];
     return isInteger
       ? Math.floor(Math.random() * (max - min + 1) + min)
       : Math.random() * (max - min) + min;
-  };
+  }
 
-  static jsonp = async (url: string, params?: Record<string, any>) => {
+  static clone(data: any, isAsync = false) {
+    if (isAsync) {
+      return new Promise((resolve, reject) => {
+        try {
+          const { port1, port2 } = new MessageChannel();
+          port1.onmessage = (e) => {
+            resolve(e.data);
+          };
+          port2.postMessage(data);
+        } catch (error) {
+          reject(error);
+        }
+      });
+    }
+
+    const objectMap = new Map();
+
+    const deepClone = (value: any) => {
+      const type = typeof value;
+      if (type !== 'object' || type === null) return value;
+      if (objectMap.has(value)) {
+        return objectMap.get(value);
+      }
+
+      const result = Array.isArray(value) ? [] : {};
+      objectMap.set(value, result);
+      for (const key in value) {
+        result[key] = deepClone(value[key]);
+      }
+      return result;
+    };
+
+    return deepClone(data);
+  }
+
+  static async jsonp(url: string, params?: Record<string, any>) {
     return new Promise<any>((resolve, reject) => {
       let i = 0;
       while (window[`__JSONP_CALLBACK_${i}__`]) i++;
@@ -50,7 +92,7 @@ class Getter {
 
       document.head.appendChild(script);
     });
-  };
+  }
 }
 
 export default Getter;

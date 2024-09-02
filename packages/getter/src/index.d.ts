@@ -15,5 +15,7 @@ export default class Getter {
   static type: (data: any) => DataType;
   static round: (number: number, precision?: number) => number;
   static random: (from: number, to: number, integer?: boolean) => number;
+  static clone<T>(data: T, isAsync?: false): T;
+  static clone<T>(data: T, isAsync: true): Promise<T>;
   static jsonp: (url: string, params?: Record<string, any>) => Promise<any>;
 }
