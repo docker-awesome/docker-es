@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.5.4](https://github.com/docker-awesome/docker-es/compare/@docker-es/hub@0.5.3...@docker-es/hub@0.5.4) (2024-09-03)
+
+**Note:** Version bump only for package @docker-es/hub
+
+
+
+
+
 ## [0.5.3](https://github.com/docker-awesome/docker-es/compare/@docker-es/hub@0.5.0...@docker-es/hub@0.5.3) (2024-08-29)
 
 
