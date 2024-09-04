@@ -11,7 +11,10 @@ export type DataType = PrimitiveType | CompositeType;
 
 export default class Getter {
   static count: (data: ArrayFromParameter) => number;
-  static id(options?: { prefix?: string; suffix?: string }): string;
+  static id(options?: {
+    prefix?: string | number;
+    suffix?: string | number;
+  }): string;
   static uuid: () => `${string}-${string}-${string}-${string}-${string}`;
   static type: (data: any) => DataType;
   static round: (number: number, precision?: number) => number;
